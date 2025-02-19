@@ -1,6 +1,4 @@
-from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report
 from sklearn.tree import DecisionTreeClassifier
 from janitor import clean_names
 import pandas as pd
@@ -85,7 +83,6 @@ def agregar_dados(df: pd.DataFrame) -> pd.DataFrame:
     df_clientes.reset_index(inplace=True)
     return df_clientes
 
-
 def transformar_dados(df_clientes: pd.DataFrame) -> pd.DataFrame:
     """Transforma os dados para o modelo de Machine Learning."""
     df_clientes['churn'] = df_clientes.pop('situacao_no_ciclo_de_vida').apply(lambda x: 0 if x == 'clientes ativos' else 1)
@@ -96,11 +93,11 @@ def transformar_dados(df_clientes: pd.DataFrame) -> pd.DataFrame:
     df_clientes['sexo'] = df_clientes['sexo'].apply(lambda x: 0 if x != 'feminino' else 1)
     df_clientes['tipo_do_item'] = df_clientes['tipo_do_item'].apply(lambda x: 1 if x.strip() == 'serviço' else 0)
 
-    return df_clientes
+    clientes_totais = df_clientes.shape[0]
 
+    return df_clientes, clientes_totais
 
 # ---------------------------- APLICAR MODELO ---------------------------- #
-
 
 def prever_churn(df_clientes: pd.DataFrame) -> pd.DataFrame:
     """Carrega o modelo e faz previsões de churn."""
@@ -121,10 +118,10 @@ def prever_churn(df_clientes: pd.DataFrame) -> pd.DataFrame:
 
     df_final['previsoes'] = previsoes
     df_final = df_final[df_final['previsoes'] == 1].drop(columns=['previsoes'])
-
+    df_final = df_final.sort_values(by='nome', ascending=True)
     df_final.to_csv('df_com_previsoes.csv', index=False)
-    return df_final
 
+    return df_final
 
 # ---------------------------- EXECUÇÃO ---------------------------- #
 
@@ -138,8 +135,13 @@ if __name__ == "__main__":
     df = df[df['situacao_no_ciclo_de_vida'] == 'clientes ativos']
 
     df_clientes = agregar_dados(df)
-    df_clientes = transformar_dados(df_clientes)
+    df_clientes, clientes_totais = transformar_dados(df_clientes)
 
     df_final = prever_churn(df_clientes)
+    clientes_churn = df_final.shape[0]
 
     print("Previsões salvas em 'df_com_previsoes.csv'.")
+    print("Métricas do dataset:")
+    print("Clientes totais analisados:", clientes_totais)
+    print("Clientes previstos à evadir:", clientes_churn)
+    print("Taxa de churn: ", np.round(clientes_churn / clientes_totais,2))

@@ -1,0 +1,220 @@
+|--- tempo_de_relacionamento <= 1.12
+|   |--- class: 0.0
+|--- tempo_de_relacionamento >  1.12
+|   |--- grupo_anestesia <= 0.50
+|   |   |--- ticket_medio <= 49.74
+|   |   |   |--- grupo_material hospitalar i <= 0.50
+|   |   |   |   |--- turno_tarde <= 0.50
+|   |   |   |   |   |--- turno_noite <= 0.50
+|   |   |   |   |   |   |--- ticket_medio <= 45.18
+|   |   |   |   |   |   |   |--- grupo_banho <= 0.50
+|   |   |   |   |   |   |   |   |--- dia_da_semana_terça-feira <= 0.50
+|   |   |   |   |   |   |   |   |   |--- tempo_de_relacionamento <= 3.25
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- tempo_de_relacionamento >  3.25
+|   |   |   |   |   |   |   |   |   |   |--- liquido <= 2756.85
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- liquido >  2756.85
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- dia_da_semana_terça-feira >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- grupo_banho >  0.50
+|   |   |   |   |   |   |   |   |--- dia_da_semana_terça-feira <= 0.50
+|   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- dia_da_semana_terça-feira >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- ticket_medio >  45.18
+|   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |--- turno_noite >  0.50
+|   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |--- turno_tarde >  0.50
+|   |   |   |   |   |--- grupo_medicamentos hospitalares <= 0.50
+|   |   |   |   |   |   |--- venda <= 39.00
+|   |   |   |   |   |   |   |--- grupo_exame laboratorial <= 0.50
+|   |   |   |   |   |   |   |   |--- animais_vivos <= 1.50
+|   |   |   |   |   |   |   |   |   |--- grupo_consultas <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- dia_da_semana_sexta-feira <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- dia_da_semana_sexta-feira >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- grupo_consultas >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- animais_vivos >  1.50
+|   |   |   |   |   |   |   |   |   |--- ticket_medio <= 32.30
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |--- ticket_medio >  32.30
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- grupo_exame laboratorial >  0.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- venda >  39.00
+|   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |--- grupo_medicamentos hospitalares >  0.50
+|   |   |   |   |   |   |--- liquido <= 2452.64
+|   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- liquido >  2452.64
+|   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |--- grupo_material hospitalar i >  0.50
+|   |   |   |   |--- venda <= 16.50
+|   |   |   |   |   |--- sexo <= 0.50
+|   |   |   |   |   |   |--- animais_vivos <= 2.50
+|   |   |   |   |   |   |   |--- dia_da_semana_domingo <= 0.50
+|   |   |   |   |   |   |   |   |--- dia_da_semana_sexta-feira <= 0.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- dia_da_semana_sexta-feira >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- dia_da_semana_domingo >  0.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- animais_vivos >  2.50
+|   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |--- sexo >  0.50
+|   |   |   |   |   |   |--- dia_da_semana_segunda-feira <= 0.50
+|   |   |   |   |   |   |   |--- venda <= 8.00
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- venda >  8.00
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- dia_da_semana_segunda-feira >  0.50
+|   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |--- venda >  16.50
+|   |   |   |   |   |--- dia_da_semana_quarta-feira <= 0.50
+|   |   |   |   |   |   |--- dia_da_semana_sexta-feira <= 0.50
+|   |   |   |   |   |   |   |--- tempo_de_relacionamento <= 2.00
+|   |   |   |   |   |   |   |   |--- ticket_medio <= 43.99
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- ticket_medio >  43.99
+|   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |--- tempo_de_relacionamento >  2.00
+|   |   |   |   |   |   |   |   |--- dia_da_semana_domingo <= 0.50
+|   |   |   |   |   |   |   |   |   |--- turno_noite <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- tempo_de_relacionamento <= 5.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |   |--- tempo_de_relacionamento >  5.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- turno_noite >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- dia_da_semana_domingo >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- dia_da_semana_sexta-feira >  0.50
+|   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |--- dia_da_semana_quarta-feira >  0.50
+|   |   |   |   |   |   |--- class: 1.0
+|   |   |--- ticket_medio >  49.74
+|   |   |   |--- tempo_de_relacionamento <= 3.25
+|   |   |   |   |--- grupo_procedimentos <= 0.50
+|   |   |   |   |   |--- dia_da_semana_sexta-feira <= 0.50
+|   |   |   |   |   |   |--- animais_vivos <= 2.50
+|   |   |   |   |   |   |   |--- sexo <= 0.50
+|   |   |   |   |   |   |   |   |--- dia_da_semana_segunda-feira <= 0.50
+|   |   |   |   |   |   |   |   |   |--- venda <= 24.50
+|   |   |   |   |   |   |   |   |   |   |--- dia_da_semana_quinta-feira <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |   |--- dia_da_semana_quinta-feira >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- venda >  24.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- dia_da_semana_segunda-feira >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- sexo >  0.50
+|   |   |   |   |   |   |   |   |--- liquido <= 411.35
+|   |   |   |   |   |   |   |   |   |--- dia_da_semana_terça-feira <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- dia_da_semana_segunda-feira <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |   |--- dia_da_semana_segunda-feira >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- dia_da_semana_terça-feira >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- liquido >  411.35
+|   |   |   |   |   |   |   |   |   |--- dia_da_semana_quarta-feira <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- grupo_vacinação <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |   |--- grupo_vacinação >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |--- dia_da_semana_quarta-feira >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- animais_vivos <= 1.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |   |--- animais_vivos >  1.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |--- animais_vivos >  2.50
+|   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |--- dia_da_semana_sexta-feira >  0.50
+|   |   |   |   |   |   |--- sexo <= 0.50
+|   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- sexo >  0.50
+|   |   |   |   |   |   |   |--- ticket_medio <= 61.24
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- ticket_medio >  61.24
+|   |   |   |   |   |   |   |   |--- grupo_tosa <= 0.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- grupo_tosa >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |--- grupo_procedimentos >  0.50
+|   |   |   |   |   |--- class: 0.0
+|   |   |   |--- tempo_de_relacionamento >  3.25
+|   |   |   |   |--- grupo_tosa <= 0.50
+|   |   |   |   |   |--- liquido <= 1951.88
+|   |   |   |   |   |   |--- venda <= 8.50
+|   |   |   |   |   |   |   |--- grupo_farmácia <= 0.50
+|   |   |   |   |   |   |   |   |--- tipo_do_item <= 0.50
+|   |   |   |   |   |   |   |   |   |--- grupo_material hospitalar i <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- grupo_material hospitalar i >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- tipo_do_item >  0.50
+|   |   |   |   |   |   |   |   |   |--- ticket_medio <= 133.32
+|   |   |   |   |   |   |   |   |   |   |--- turno_tarde <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |   |--- turno_tarde >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- ticket_medio >  133.32
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |--- grupo_farmácia >  0.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- venda >  8.50
+|   |   |   |   |   |   |   |--- venda <= 31.50
+|   |   |   |   |   |   |   |   |--- dia_da_semana_terça-feira <= 0.50
+|   |   |   |   |   |   |   |   |   |--- dia_da_semana_quinta-feira <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- animais_vivos <= 2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- animais_vivos >  2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- dia_da_semana_quinta-feira >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- dia_da_semana_terça-feira >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- venda >  31.50
+|   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |--- liquido >  1951.88
+|   |   |   |   |   |   |--- venda <= 75.00
+|   |   |   |   |   |   |   |--- grupo_farmácia <= 0.50
+|   |   |   |   |   |   |   |   |--- ticket_medio <= 114.90
+|   |   |   |   |   |   |   |   |   |--- dia_da_semana_terça-feira <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- dia_da_semana_quarta-feira <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- dia_da_semana_quarta-feira >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |--- dia_da_semana_terça-feira >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- ticket_medio >  114.90
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- grupo_farmácia >  0.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- venda >  75.00
+|   |   |   |   |   |   |   |--- dia_da_semana_quarta-feira <= 0.50
+|   |   |   |   |   |   |   |   |--- animais_vivos <= 2.50
+|   |   |   |   |   |   |   |   |   |--- sexo <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- turno_tarde <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |   |--- turno_tarde >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |--- sexo >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- animais_vivos >  2.50
+|   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |--- dia_da_semana_quarta-feira >  0.50
+|   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |--- grupo_tosa >  0.50
+|   |   |   |   |   |--- venda <= 10.00
+|   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |--- venda >  10.00
+|   |   |   |   |   |   |--- class: 0.0
+|   |--- grupo_anestesia >  0.50
+|   |   |--- class: 1.0
